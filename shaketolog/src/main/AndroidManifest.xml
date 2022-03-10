@@ -3,7 +3,9 @@
     package="com.paven196.shaketolog">
 
     <application>
-        <activity android:name=".LoggerActivity" />
+        <activity
+            android:name=".LoggerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

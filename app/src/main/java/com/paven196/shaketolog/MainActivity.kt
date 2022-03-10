@@ -1,6 +1,9 @@
 package com.paven196.shaketolog
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -8,6 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         ShakeLogger.registerOnShakeToLogListener(this)
+
+        val edtLog = findViewById<EditText>(R.id.edtLog)
+        findViewById<Button>(R.id.btnAddLog).setOnClickListener {
+            val content = edtLog.text.toString()
+            if (content.isNotEmpty())
+                ShakeLogger.addLog(content)
+            else
+                Toast.makeText(this, "Enter log", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onResume() {
