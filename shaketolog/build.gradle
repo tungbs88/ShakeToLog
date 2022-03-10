@@ -39,5 +39,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Shake Detector
-    implementation'com.github.tbouron.shakedetector:library:1.0.0@aar'
+    implementation 'com.github.tbouron.shakedetector:library:1.0.0@aar'
 }
