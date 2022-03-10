@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ShakeToLog"
 include ':app'
-include ':shaketolog'
